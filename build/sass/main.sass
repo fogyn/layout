@@ -1,0 +1,765 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-color: #F9FDFF
+
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.slick-dotted.slick-slider 
+	//margin-bottom: 100px
+
+/* перебивка стилей slick-slider */
+.slick
+	&-slide
+		outline: none
+	&-prev
+		left: 24px
+		z-index: 2
+	&-next 
+		right: 24px
+		z-index: 2
+
+.slider
+	&-arrow
+		position: absolute
+		width: 30px
+		height: 20px
+		cursor: pointer
+		z-index: 3 // поправить позже
+		top: 50%
+		margin-top: -10px
+		&__left
+			background: url(../img/slider/arrow-left__unactive.png) center no-repeat
+			left: 48px
+		&__right
+			background: url(../img/slider/arrow-right__unactive.png) center no-repeat
+			right: 48px
+.slick-dots li
+	top: -400px
+	right: -1350px
+	//top: -400px
+	//right: -500px
+	color: #000a
+	display: block
+
+.slick-active	
+	//font-size: 30px
+	font-weight: 900
+	//background-color: #5B9BF3
+
+/* перебивка свойств slick-slider */
+.slick-list
+	border-radius: 24px	
+	
+	
+.slick-dots li button
+	border-radius: 50%
+	background-color: #cee1fb
+	width: 10px
+	height: 10px
+	position: absolute
+	//right: -400px
+	//top: -500px
+	bottom: -23px
+.slick-dots li button:before
+	width: 15px
+	height: 15px
+	content: ''
+	//font-size: 80px
+	
+.slick-dots li.slick-active button:before
+	content: ''
+	//font-size: 90px
+	background-color: #5B9BF3
+	border-radius: 50%
+.armchair-header
+	position: relative
+
+.dropdown
+	display: none
+	position: absolute
+	z-index: 100
+	width: 100px
+	height: 120px
+	right: 200px
+	top: 0
+	//background-color: red
+		
+	&:hover
+		background-color: sky
+		.dropdown-content
+			display: flex
+			width: 100px
+			flex-direction: column
+			
+			border: 1px solid #000000
+a
+	&:focus
+		color: green
+ 
+
+.r2
+	padding-left: 23px
+	
+#range-header
+	display: none
+.armchair-header-img
+	width: 524px
+	height: 751px
+	background-color: #FCEAE8
+	position: relative
+	z-index: 1
+	&-icons
+		display: flex
+		margin: 86px 190px 20px 310px
+		.icon1
+			margin-right: 22px
+	.armch
+		position: absolute
+		z-index: 10
+		left: -212px
+		top: 0px
+	.counter
+		position: absolute
+		z-index: 25
+		top: 381px
+		right: 142px
+			
+.armchair-header-description
+	margin: 0
+	padding: 0
+	.navigation
+		display: flex
+		margin: 0
+		padding: 0
+		margin-bottom: 125px
+		&-menu
+			display: flex
+			margin-left: 60px
+			&-furniture, &-illumination
+				margin-right: 60px
+			div
+				
+				h4
+					font-family: Open Sans
+					font-style: normal
+					font-weight: normal
+					font-size: 20px
+					line-height: 19px
+					color: #707094
+					
+
+				&:hover
+					h4 					
+						color: #000
+					 	
+	&__title
+		width: 545px
+		h1
+			font-family: Playfair Display
+			font-style: normal
+			font-weight: bold
+			font-size: 57px
+		.name
+			font-family: Open Sans
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+		.price1
+			font-family: Open Sans
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+			padding-right: 22px
+		.price2
+			font-family: Open Sans
+			font-style: normal
+			font-weight: 600
+			font-size: 30px
+			line-height: 41px
+		.buy
+			width: 230px
+			height: 58px
+			//color: #ffffff
+			font-family: Open Sans
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 22px
+			padding: 18px 82px 18px 82px
+			&:hover
+				background-color: #000
+				cursor: 
+				color: #fff
+.armchair-new
+	.container
+		.row
+			justify-content: center
+			.slider-description
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				margin-top: 20px
+				margin-bottom: 50px
+				&-text
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					p
+						width: 653px
+						height: 69px
+						align-items: center
+			.col-12
+				.new-title
+					display: none
+				.my-class
+					margin-bottom: 0
+					.slider-arrow
+						margin-top: 380px
+						//
+					.slick
+						&-dots
+							bottom: -250px
+					.slick-dots li button:before
+						color: red
+						//content: ''
+					.slick-dots li
+						display: inline-block
+						top: 0
+						right: 0
+						bottom: -400px
+					img
+						width: 250px
+
+					.customer
+						.row
+							.customer-img
+								&-title	
+									h2
+										text-align: center
+							.customer-main
+								img
+									width: 500px
+									height: 600px
+.armchair-sell
+	margin-bottom: 135px
+	.container
+		position: relative
+		.row
+			
+			.col-8
+				//width: 815px
+				height: 545px
+				margin-left: -150px
+				background-color: #FAECE9
+				padding-left: 170px
+				padding-top: 73px
+		
+				h2
+					margin-bottom: 48px
+				.sell-description
+					span
+						margin-right: 50px
+						&:hover
+							font-weight: bold
+							//color: red
+
+		.r2
+			position: absolute
+			z-index: 10
+			bottom: -70px
+			.item
+				//width: 160px
+				padding: 0
+				background-color: #ffffff
+				//margin-left: 5px
+				margin-right: 25px
+				&:hover
+					cursor: pointer
+					.buy
+						display: flex
+						background-color: #000
+						color: #fff
+					
+				
+				p
+					display: flex
+					justify-content: center
+					font-family: Open Sans
+					font-style: normal
+					font-weight: normal
+					font-size: 16px
+					line-height: 22px
+				.sp
+					display: flex
+					justify-content: center
+					align-items: center
+					.price1
+						font-family: Open Sans
+						font-style: normal
+						font-weight: 600
+						font-size: 28px
+						line-height: 38px
+						margin-right: 10px
+					.price2
+						font-family: Open Sans
+						font-style: normal
+						font-weight: 600
+						font-size: 16px
+						line-height: 22px
+				.img
+					img
+						width: 190px
+						height: 232px
+				.buy
+					display: flex
+					width: 200px
+					height: 58px
+					background-color: #F9FDFF
+					color: #F9FDFF
+					justify-content: center
+					align-items: center
+					font-family: Open Sans
+					font-style: normal
+					font-weight: bold
+					font-size: 20px
+					line-height: 22px
+		
+
+.dropdown-content
+	display: none
+.mobile-sell
+	display: none
+
+footer
+	background-color: #ffffff
+	.container
+		
+		.row
+			.foter-icon
+				margin-bottom: 30px
+			.contakt-data
+				display: flex
+				.phone
+					display: flex
+					margin-right: 20px
+					.phone-img
+						margin-right: 8px
+				.email
+					display: flex
+					.email-img
+						margin-right: 8px
+			.col-6
+				.col-12
+					padding-left: 0
+				.col
+					p
+						&:hover
+							font-weight: bold
+
+
+@media screen and (max-width: 1445px)
+	.slick-dots li
+		right: -1100px
+	footer
+		//background-color: red
+
+	
+@media screen and (max-width: 1030px)
+	.slick-dots li
+		right: -820px
+		top: -290px
+
+	.armchair-header-description
+		.navigation
+			margin-bottom: 30px
+			&-menu
+				&-furniture, &-illumination, &-textile
+					margin-right: 20px
+			
+	.armchair-header-img
+		height: 563px
+		.armch
+			left: -159px
+			img
+				width: 75%
+				height: 75%
+		.counter
+			top: 280px
+			right: 157px
+		&-icons
+			margin-top: 20px
+			margin-left: 250px
+
+	.armchair-new
+		.container
+			.row
+				.col-12
+					.my-class
+						.customer-img
+							img
+								width: 200px
+	.armchair-new .container .row .col-12 .my-class .customer .row .customer-main img
+		width: 100%
+		height: 100%			
+	
+	//
+	.armchair-sell .container
+		.r2
+			.item
+				margin-right: 30px
+				.img
+					width: 150px
+					img
+						width: 150px
+						height: 200px
+				.buy
+					width: 150px
+	.armchair-sell .container .row .col-8
+		padding-top: 20px
+		height: 400px
+		h2
+			margin-bottom: 20px
+		.sell-description
+			span
+				margin-right: 30px
+	
+	footer
+		//background-color: green
+
+@media screen and (max-width: 768px)
+	.slick-dots li
+		right: -600px
+		top: -180px
+	.armchair-header-description
+		.navigation
+			flex-direction: column
+			justify-content: start
+			align-items: start
+			margin-bottom: 20px
+			&-img
+				margin-bottom: 10px
+
+			&-menu
+				margin-left: 0
+				&-furniture, &-illumination, &-textile
+					margin-right: 10px
+					h4
+						font-weight: 400
+						font-size: 13px
+		&__title
+			h1
+				font-weight: 600
+				font-size: 24px
+	.armchair-header-img
+		height: 324px
+		.armch
+			left: -92px
+			img
+				width: 60%
+				height: 60%
+		.counter
+			top: 157px
+			right: 140px
+		&-icons
+			margin-top: 20px
+			margin-left: 150px
+
+	.armchair-new
+		.container
+			.row
+				.col-12
+					.my-class
+						.slider-arrow
+							margin-top: 280px
+						.customer-img
+							img
+								width: 150px
+	.armchair-new .container .row .col-12 .my-class .customer .row .customer-mai
+		width: 80%
+		height: 80%	
+
+	.armchair-sell .container
+		.r2
+			.item
+				margin-right: 15px
+				.img
+					width: 120px
+					img
+						width: 120px
+						height: 160px
+				.buy
+					width: 120px
+	.armchair-sell .container .row .col-8
+		padding-top: 20px
+		height: 400px
+		h2
+			margin-bottom: 20px
+		.sell-description
+			span
+				margin-right: 10px
+
+
+	footer
+		flex-wrap: wrap
+		//background-color: yellow
+		.row
+			.contakt-data
+				flex-direction: column
+			.col-6
+					
+				flex-wrap: wrap
+			
+			
+
+
+//мобильная версия
+@media screen and (max-width: 430px)
+	.slick-dots
+		display: none
+	.dropdown
+		display: block
+		right: -113px
+		top: 7px
+				
+		&:hover
+			background-color: #000
+			a
+				color: #fff
+
+	#range-header
+		display: block
+	.armchair-header-description
+		position: relative
+		.navigation
+			position: absolute
+			top: -226px
+			&-menu
+				display: none
+		&__title
+			position: absolute
+			z-index: 15
+			top: 110px
+			left: 57px
+	.armchair-header-img
+		background-color: #F9FDFF
+		height: 500px
+		.armch
+			top: 60px
+			img
+				width: 85%
+				height: 85%
+		.counter
+			top: 480px
+			right: 17px
+			width: 50px
+	
+		&-icons
+			position: absolute
+			z-index: 200
+			right: -80px
+	.armchair-new .container .row
+		.col-12 .new-title
+			display: flex
+			margin-left: 20px
+			h3
+				position: relative
+			hr
+				width: 90px
+				height: 4px
+				background-color: #000
+				position: absolute
+				left: 35px
+				top: 20px
+				
+		.customer-img
+			display: none
+
+		.slider-description
+			margin-bottom: 0
+			&-text p 
+				width: 420px
+				height: 132px
+
+
+	.armchair-sell
+		margin-bottom: 20px
+		.container
+			.row .armchair-sell-row-title
+				background-color: #F9FDFF
+				height: 100px
+				h2
+					width: 400px
+				.sell-description
+					width: 400px
+					display: flex
+					justify-content: space-between
+			.r2
+				display: none
+		.mobile-sell
+			display: block
+			.title-img
+				padding-left: 10px
+			.img
+				padding-left: 90px
+			.buy
+				display: none
+			.counter2
+				position: absolute
+				z-index: 100
+				right: 39px
+				top: auto
+	footer
+		.row-line
+			display: none
+		//background-color: pink
+		.row
+			flex-direction: column
+			align-items: center
+			.contakt
+				margin-left: -200px
+				.footer-icon
+					margin-left: -10px
+				.contakt-data
+					font-size: 17px
+			.service
+				max-width: 100%
+				.col
+					padding-right: 5px
+					padding-left: 43px
+					margin-right: 45px
+										
+					p
+						font-size: 17px
+
+	
+	
+	
+	footer .container .row .contakt-data .phone
+		margin-right: 0
+
+@media screen and (max-width: 380px)
+	.armchair-header-description__title
+		width: 300px
+		top: 90px
+		h1
+			margin-bottom: -10px
+		p
+			margin-bottom: -12px
+		.buy
+			&:hover
+				background-color: #000
+				color: #fff
+		
+	#range-header
+		margin: auto
+	.armchair-new .container .row .col-12 .my-class
+		display: flex
+		flex-direction: column
+		align-items: center
+	.armchair-new .container .row .slider-description
+		display: none
+
+	.armchair-sell
+		.container
+			.row .armchair-sell-row-title
+				h2
+					width: 300px
+				.sell-description
+					width: 300px
+					span
+						margin-right: 80px
+				
+		.mobile-sell
+			#range
+				margin-left: 106px
+			
+			.title-img
+				//padding-left: 10px
+			.img
+				padding-left: 70px
+
+	footer
+		.row
+			.phone
+				width: 300px
+			.service
+				.col
+					margin-right: 30px
+		
+
+ 
+@media screen and (max-width: 325px)
+	.armchair-header-description__title
+		display: flex
+		flex-direction: column
+		align-items: center
+		left: -8px
+
+	.armchair-sell
+			.container
+				.row .armchair-sell-row-title
+					h2
+					.sell-description
+						span
+							margin-right: 56px
+			.mobile-sell
+				#range
+					margin-left: 88px
+	
+				
+				.img
+					padding-left: 40px
+	
+
+
+	footer
+		.row
+			.contakt
+				margin-left: -155px
+				.foter-icon
+					margin-left: -12px
+			.service
+				.col
+					margin-right: 0
+		
+
+@import "media" // Always at the end
